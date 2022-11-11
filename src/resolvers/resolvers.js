@@ -7,13 +7,6 @@ export const resolvers = {
     },
   },
   Mutation: {
-    createTask(_, { input }) {
-      console.log(input);
-      input._id = tasks.length;
-      tasks.push(input);
-
-      return tasks;
-    },
     async createUser(_, { input }) {
       var newUser = new User(input);
       await newUser.save();

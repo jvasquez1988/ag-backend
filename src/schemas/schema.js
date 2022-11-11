@@ -4,9 +4,6 @@ import { resolvers } from "../resolvers/resolvers";
 const typeDefs = `
 
     type Query{
-        hello: String
-        greet(name:String): String
-        tasks: [Task]
         Users:[User]
     }
 
@@ -35,7 +32,6 @@ const typeDefs = `
     }
 
     type Mutation{
-        createTask(input: TaskInput): [Task] 
         createUser(input:UserInput): User
         deleteUser(_id: ID): User
         updateUser(_id:ID, input:UserInput):User
