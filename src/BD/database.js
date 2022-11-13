@@ -2,9 +2,12 @@ import Mongoose from "mongoose";
 
 export async function connect() {
   try {
-    await Mongoose.connect("mongodb://localhost:27017/mongodbgrapql");
 
-    console.log("Conectados a DB Mongo en mongodb://localhost:27017/mongodbgrapql");
+    require('dotenv').config({path:'.env'});
+
+    await Mongoose.connect(process.env.MONGO_CONNECTION || "mongodb+srv://jcvasquez:UnavezfuialaplayaconDios@test-ag.qxvritb.mongodb.net/?retryWrites=true&w=majority");
+
+    console.log(`Conectados a DB Mongo en ${process.env.MONGO_CONNECTION}`);
   } catch (e) {
     console.log(e);
   }
