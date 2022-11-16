@@ -3,6 +3,7 @@ import { graphqlHTTP } from "express-graphql";
 import schema from "./schemas/schema";
 import { connect } from "./BD/database";
 
+require('dotenv').config({path:'.env'});
 const app = express();
 const cors = require("cors");
 
@@ -25,4 +26,4 @@ app.use(
   })
 );
 
-app.listen(3000, () => console.log("Run on port 3000"));
+app.listen(process.env.PORT, () => console.log(`Run on port ${process.env.PORT}`));

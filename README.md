@@ -8,5 +8,5 @@ para probar el frontend y el backend, se subio BD mongo a la nube para que no te
 
 
 #
-usar npm install
-### Ejecutar npm start para iniciar el servicio
+usar npm install.\
+Ejecutar npm start para iniciar el servicio en el puerto 8002 como dice .env
